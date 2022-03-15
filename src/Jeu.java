@@ -9,8 +9,8 @@ public class Jeu {
     int score2;
 
     public Jeu() {
-        redSeeds = new int[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,2,2,2,2};
-        blueSeeds = new int[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,2,2,2,2};
+        redSeeds  = new int[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
+        blueSeeds = new int[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
         score1 = 0;
         score2 = 0;
     }
@@ -26,9 +26,9 @@ public class Jeu {
 
     List<Mouvement> legalMouvements(int playerNo) {
         ArrayList<Mouvement> res = new ArrayList<>();
-        int offset = 6 * (playerNo - 1);
+        int offset = 8 * (playerNo - 1);
 
-        for (int i = offset; i < offset + 6; i++) {
+        for (int i = offset; i < offset + 8; i++) {
             if (redSeeds[i] > 0) { 
                 res.add(new Mouvement(i, true));
             }
@@ -58,7 +58,7 @@ public class Jeu {
         
         if (Mouvement.PairFirst) {
             while (numRedSeeds > 0) {
-                pos = (Mouvement.position + tracker) % 12;
+                pos = (Mouvement.position + tracker) % 16;
                 if (pos != Mouvement.position) {
 
                     newRedSeeds[pos]++;
@@ -68,7 +68,7 @@ public class Jeu {
                 tracker++;
             }
             while (numblueSeeds > 0) {
-                pos = (Mouvement.position + tracker) % 12;
+                pos = (Mouvement.position + tracker) % 16;
                 if (pos != Mouvement.position) {
 
                     newblueSeeds[pos]++;
@@ -79,7 +79,7 @@ public class Jeu {
             }
         } else {
             while (numblueSeeds > 0) {
-                pos = (Mouvement.position + tracker) % 12;
+                pos = (Mouvement.position + tracker) % 16;
                 if (pos != Mouvement.position) {
 
                     newblueSeeds[pos]++;
@@ -89,7 +89,7 @@ public class Jeu {
                 tracker++;
             }
             while (numRedSeeds > 0) {
-                pos = (Mouvement.position + tracker) % 12;
+                pos = (Mouvement.position + tracker) % 16;
                 if (pos != Mouvement.position) {
 
                     newRedSeeds[pos]++;
@@ -112,15 +112,15 @@ public class Jeu {
 
         boolean fail = false;
         int i = pos - Mouvement.position;
-        if (i < 0) i += 12;
+        if (i < 0) i += 16;
         int count = 0;
         while (!fail && (i >= 0)) {
-            if (playerNo == 1 && Math.floorMod((Mouvement.position + i), 12) < 6) {
+            if (playerNo == 1 && Math.floorMod((Mouvement.position + i), 16) < 8) {
                 break;
-            } else if (playerNo == 2 && Math.floorMod((Mouvement.position + i), 12) > 5) {
+            } else if (playerNo == 2 && Math.floorMod((Mouvement.position + i), 16) > 7) {
                 break;
             }
-            int capturePos = Math.floorMod((Mouvement.position + i), 12);
+            int capturePos = Math.floorMod((Mouvement.position + i), 16);
             int hole;
             if (lastColor == Color.Blue) {
                 hole = newblueSeeds[capturePos] ;
@@ -218,29 +218,17 @@ public class Jeu {
     Mouvement starveMouvement(Jeu node, int playerNo) {
         List<Mouvement> Mouvements = node.legalMouvements(playerNo);
         for (Mouvement Mouvement : Mouvements) {
-            if (playerNoMouvements(node.applyMouvement(Mouvement, nextPlayer(playerNo), false), nextPlayer(playerNo))) {
+            if (playerNoMouvements(node.applyMouvement(Mouvement, nextPlayer(playerNo), true), nextPlayer(playerNo))) {
                 return Mouvement;
             }
         }
         return Mouvements.get(1);
     }
 
-    int evalNode(Jeu node, int playerNo, boolean maximisingPlayer) {
-        if (playerNo == 1 && maximisingPlayer || playerNo == 2 && !maximisingPlayer) {
-            if (node.score1 >= 38) return 10000000;
-            else if (node.score2 >= 38) return -10000000;
-            else return node.score1 - node.score2;
-        } else {
-            if (node.score2 >= 38) return 10000000;
-            else if (node.score1 >= 38) return -10000000;
-            else return node.score2 - node.score1;
-        }
-    }
+
 
     int advancedEval(Jeu node, int playerNo, boolean maximisingPlayer) {
-        //if (playerNoMouvements(node, nextPlayer(playerNo))) {
-        //    return 100000000;
-        //}
+
 
         boolean p1max = playerNo == 1 && maximisingPlayer || playerNo == 2 && !maximisingPlayer;
 
@@ -273,7 +261,7 @@ public class Jeu {
 
     int countMaxPit(Jeu node, int playerNo) {
         int count = 0;
-        for (int i = 6 * (playerNo - 1); i < 6 * playerNo; i++) {
+        for (int i = 8 * (playerNo - 1); i < 8 * playerNo; i++) {
             count = Math.max(count, node.blueSeeds[i] + node.redSeeds[i]);
         }
         return count;
@@ -281,7 +269,7 @@ public class Jeu {
 
     int countSeedsOnSide(Jeu node, int playerNo) {
         int acc = 0;
-        for (int i = 6 * (playerNo - 1); i < 6 * playerNo; i++) {
+        for (int i = 8 * (playerNo - 1); i < 8 * playerNo; i++) {
             acc += node.blueSeeds[i] + node.redSeeds[i] ;
         }
         return acc;
@@ -289,7 +277,7 @@ public class Jeu {
 
     int countPlayablePits(Jeu node, int playerNo) {
         int count = 0;
-        for (int i = 6 * (playerNo - 1); i < 6 * playerNo; i++) {
+        for (int i = 8 * (playerNo - 1); i < 8 * playerNo; i++) {
             if (node.blueSeeds[i] + node.redSeeds[i]  > 0) count++;
         }
         return count;

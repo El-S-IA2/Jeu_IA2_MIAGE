@@ -1,0 +1,30 @@
+
+h
+java:S1871x"MThis branch's code block is the same as the block for the branch on line 118.(ž¥¼˜úÿÿÿÿ
+m
+java:S3457¢"Q%n should be used in place of \n to produce the platform-specific line separator.(ŽÛ·Ïÿÿÿÿÿ
+W	java:S125¼"<This block of commented-out lines of code should be removed.(ßË¡ýýÿÿÿÿ
+m
+java:S3776/"RRefactor this method to reduce its Cognitive Complexity from 78 to the 15 allowed.(±®¾¬ýÿÿÿÿ
+l	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºß£ôÿÿÿÿÿ
+l	java:S117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºß£ôÿÿÿÿÿ
+s	java:S135u"YReduce the total number of break and continue statements in this loop to use at most one.(¯ÛÿÅüÿÿÿÿ
+l	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãîË®ýÿÿÿÿ
+M	java:S106k"9Replace this use of System.out or System.err by a logger.(ž’úU
+m
+java:S3457ƒ"Q%n should be used in place of \n to produce the platform-specific line separator.(¸·æúøÿÿÿÿ
+T	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(¸·æúøÿÿÿÿ
+h
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(”ÈíÛ
+U
+java:S1117¹"9Rename "score2" which hides the field declared at line 9.(ÂÀÀÕÿÿÿÿÿ
+U
+java:S1117¸"9Rename "score1" which hides the field declared at line 8.(Èö‚úÿÿÿÿ
+T	java:S106¢"9Replace this use of System.out or System.err by a logger.(ŽÛ·Ïÿÿÿÿÿ
+g	java:S117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ñ½”
+O	java:S106"9Replace this use of System.out or System.err by a logger.(”ÈíÛ
+f
+java:S3457k"Q%n should be used in place of \n to produce the platform-specific line separator.(ž’úU
+k	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±®¾¬ýÿÿÿÿ
+B
+java:S14811",Remove this unused "skipped" local variable.(¡áë´

@@ -8,12 +8,18 @@ import java.util.function.IntSupplier;
 public class AdvancedOware {
     int enemyRange;
     int myRange;
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
 
     private final int DEPTH = 8;
-    private final int SPECIAL_DEPTH = 6;
 
-    public AdvancedOware() {
-    }
 
 
     /**
@@ -37,7 +43,7 @@ public class AdvancedOware {
      * @param game
      */
     private void play(boolean computerStart, Jeu game) {
-        System.out.println(game);
+        System.out.println(ANSI_RED +game+ANSI_RESET);
         boolean robotPlay = computerStart;
         int currentPlayer = 1;
         int expected;
@@ -94,16 +100,6 @@ public class AdvancedOware {
         return request;
     }
 
-    private int scanInt() {
-        int res = -1;
-
-        while (res <= 0) {
-            Scanner in = new Scanner(System.in);
-            res = in.nextInt();
-        }
-
-        return res;
-    }
 
 
     /**
@@ -121,10 +117,10 @@ public class AdvancedOware {
 
         if (res.equalsIgnoreCase("robot")) {
             myRange = 0;
-            enemyRange = 6;
+            enemyRange = 8;
             return true;
         } else if (res.equalsIgnoreCase("player")) {
-            myRange = 6;
+            myRange = 8;
             enemyRange = 0;
             return false;
         } else {

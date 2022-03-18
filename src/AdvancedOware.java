@@ -1,8 +1,4 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
-import java.util.function.IntSupplier;
 
 
 public class AdvancedOware {
@@ -43,7 +39,7 @@ public class AdvancedOware {
      * @param game
      */
     private void play(boolean computerStart, Jeu game) {
-        System.out.println(ANSI_RED +game+ANSI_RESET);
+        System.out.println( game);
         boolean robotPlay = computerStart;
         int currentPlayer = 1;
         int expected;
@@ -60,10 +56,10 @@ public class AdvancedOware {
                 System.out.printf("expected value : %d\n", expected);
             } else {
                 //System.out.println(game.toString());
-                bestMouvement = nextRequest(game);
+                bestMouvement = nextRequest(game,currentPlayer);
             }
 
-            game = game.applyMouvement(bestMouvement, currentPlayer, true);
+            game = game.applyMouvement(bestMouvement, currentPlayer, true); //suprimer les prints de Elaraus
             System.out.println(game.toString());
             currentPlayer = Jeu.nextPlayer(currentPlayer);
             robotPlay = !robotPlay;
@@ -78,23 +74,43 @@ public class AdvancedOware {
      *
      * @return
      */
-    private Mouvement nextRequest(Jeu Jeu) {
+    private Mouvement nextRequest(Jeu Jeu,int playerNum) {
 
         String res = "";
         Mouvement request;
 
         while (!res.matches("[0-9]*[a-zA-Z][0-9]*")) {
             System.out.print("Taper le coup à jouer:\n");
-            Scanner in = new Scanner(System.in);
-            res = in.nextLine();
+            try (Scanner in = new Scanner(System.in)) {
+                res = in.nextLine();
+            }
         }
 
         request = new Mouvement(res);
 
         if (!(Jeu.blueSeeds[request.position] + Jeu.redSeeds[request.position] > 0)) {
             System.out.println("[WARNING] Placement illegal");
-            return nextRequest(Jeu);
+            return nextRequest(Jeu,playerNum);
         }
+
+        if (playerNum==2){
+            if ( request.position %2 == 0 ){
+                System.out.println("[WARNING] Placement illegal, Only Odd hole are allowed");
+                return nextRequest(Jeu,playerNum);
+        }
+    }
+        if(playerNum==1){
+            if ( request.position %2 != 0 ){
+                System.out.println("[WARNING] Placement illegal, Only Pair hole are allowed");
+                return nextRequest(Jeu,playerNum);
+        }
+
+        }
+
+     
+       
+
+
 
         //}
         return request;
@@ -110,21 +126,19 @@ public class AdvancedOware {
     private boolean init() {
         System.out.print("Initialisation de la partie...\n");
         System.out.print("Quel est le joueur qui commence en premier ? [robot|player]\n");
-        Scanner in = new Scanner(System.in);
-        String res = in.nextLine();
+        try (Scanner in = new Scanner(System.in)) {
+            String res = in.nextLine();
 
-        System.out.println(res);
+            System.out.println(res);
 
-        if (res.equalsIgnoreCase("robot")) {
-            myRange = 0;
-            enemyRange = 8;
-            return true;
-        } else if (res.equalsIgnoreCase("player")) {
-            myRange = 8;
-            enemyRange = 0;
-            return false;
-        } else {
-            return init();
+            if (res.equalsIgnoreCase("robot")) {
+                
+                return true;
+            } else if (res.equalsIgnoreCase("player")) {
+                return false;
+            } else {
+                return init();
+            }
         }
     }
 }

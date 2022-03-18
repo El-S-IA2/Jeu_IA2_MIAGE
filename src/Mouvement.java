@@ -1,33 +1,39 @@
 public class Mouvement{
     int position;
-    boolean PairFirst;
+    boolean ColorRed;
 
-    Mouvement(int position, boolean PairFirst) {
+    Mouvement(int position, Boolean Color) {
         this.position = position;
-        this.PairFirst = PairFirst;
+        this.ColorRed = Color;
     }
 
+
+
+
     Mouvement(String str) {
-        String[] part = str.split("(?<=\\D)(?=\\d)");
-        String[] part2 = part[0].split("(?=\\D)(?<=\\d)");
-        this.position = Integer.parseInt(part2[0]) - 1;//play
-        this.PairFirst =  part2[1].equals("R");//color
+        // il reçoit 5B 
+        String[] part = str.split("(?<=\\D)(?=\\d)"); //    split :  5 et B 
+        String[] part2 = part[0].split("(?=\\D)(?<=\\d)");  // Récupère 5 
+        this.position = Integer.parseInt(part2[0]) - 1;//play // Converstion 5 en Int   
+        this.ColorRed =  part2[1].equals("R") ; //color  
     }
 
     Mouvement() {
         position = -1;
-        PairFirst = false;
+        ColorRed = false;
     }
 
     void set(Mouvement move) {
         this.position = move.position;
-        this.PairFirst = move.PairFirst;
+        this.ColorRed = move.ColorRed;
     }
 
+    
     private String letter() {
-        if (PairFirst) return "R";
+        if (ColorRed) return "R";
         else return "B";
     }
+    
 
     @Override
     public String toString() {

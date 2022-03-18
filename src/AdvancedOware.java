@@ -81,9 +81,8 @@ public class AdvancedOware {
 
         while (!res.matches("[0-9]*[a-zA-Z][0-9]*")) {
             System.out.print("Taper le coup à jouer:\n");
-            try (Scanner in = new Scanner(System.in)) {
-                res = in.nextLine();
-            }
+            Scanner in = new Scanner(System.in);
+            res = in.nextLine();
         }
 
         request = new Mouvement(res);
@@ -126,19 +125,18 @@ public class AdvancedOware {
     private boolean init() {
         System.out.print("Initialisation de la partie...\n");
         System.out.print("Quel est le joueur qui commence en premier ? [robot|player]\n");
-        try (Scanner in = new Scanner(System.in)) {
-            String res = in.nextLine();
+        Scanner in = new Scanner(System.in);
+        String res = in.nextLine();
 
-            System.out.println(res);
+        System.out.println(res);
 
-            if (res.equalsIgnoreCase("robot")) {
-                
-                return true;
-            } else if (res.equalsIgnoreCase("player")) {
-                return false;
-            } else {
-                return init();
-            }
+        if (res.equalsIgnoreCase("robot")) {
+            
+            return true;
+        } else if (res.equalsIgnoreCase("player")) {
+            return false;
+        } else {
+            return init();
         }
     }
 }

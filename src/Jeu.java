@@ -6,7 +6,10 @@
         int[] blueSeeds;
         int score1;
         int score2;
-
+/**
+	 * Constructeur créant un nouveau plateau[16][2] avec toutes les cellules
+	 * initilisées à 4 graines (2 graines de chaques couleur)
+	 */
         public Jeu() {
             redSeeds  = new int[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
             blueSeeds = new int[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};

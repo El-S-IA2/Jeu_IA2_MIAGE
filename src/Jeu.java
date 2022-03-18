@@ -8,7 +8,7 @@
         int score2;
 /**
 	 * Constructeur créant un nouveau plateau[16][2] avec toutes les cellules
-	 * initilisées à 4 graines (2 graines de chaques couleur)
+	 * initilisées à 4 graines (2 graines de chaque couleur)
 	 */
         public Jeu() {
             redSeeds  = new int[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
@@ -32,8 +32,6 @@
             ArrayList<Mouvement> res = new ArrayList<>();
             int[]pair = new int[]{2,4,6,8,10,12,14,16};
             int[]impair = new int[]{1,3,5,7,9,11,13,15};
-
-            //int offset = 8 * (playerNo - 1); // si joueur 1 0 a 8  et si joueur 2 : 8 à 16
             
             if (playerNo==2){
 
@@ -80,35 +78,9 @@
             int numRedSeeds = newRedSeeds[Mouvement.position];
             int numblueSeeds = newblueSeeds[Mouvement.position];
             int pos = 0;
-            
-            /*
-            if (Mouvement.PairFirst) {
-                while (numRedSeeds > 0) {
-                    pos = (Mouvement.position + tracker) % 16;
-                    if (pos != Mouvement.position) {
-
-                        newRedSeeds[pos]++;
-                        numRedSeeds--;
-
-                    } else skipped++;
-                    tracker++;
-                }
-                while (numblueSeeds > 0) {
-                    pos = (Mouvement.position + tracker) % 16;
-                    if (pos != Mouvement.position) {
-
-                        newblueSeeds[pos]++;
-                        numblueSeeds--;
-
-                    } else skipped++;
-                    tracker++;
-                }
-            }
-
-            else {
-                */
-
-                // A modifier pour récuperer uniquement la couleur du mouvement. 
+                    /**
+	                * Déplace les graines d'une cellules dans les cellules suivantes dependant des regles du jeu.
+                    */
                 if (Mouvement.ColorRed){
                     while (numRedSeeds > 0) {
                         pos = (Mouvement.position + tracker) % 16;
@@ -139,10 +111,6 @@
                     newblueSeeds[Mouvement.position] = 0;
                 }
                 }
-            //}
-
-            //newRedSeeds[Mouvement.position] = 0;
-            //newblueSeeds[Mouvement.position] = 0;
 
             if (print) {
                 if (Mouvement.ColorRed)  System.out.printf("Player %d plays Mouvement %s with %d seeds\n", playerNo, Mouvement.toString(), redSeeds[Mouvement.position]);
@@ -152,6 +120,9 @@
                 }
 
             //CAPTURE BEGINS
+            /**
+	                * Capture les graines si possible dependant des regles du jeu 
+                    */
             Color lastColor = getLastColor(Mouvement);
 
             boolean fail = false;
@@ -216,16 +187,17 @@
             return res;
         }
 
+
         int minimax(Jeu node, Mouvement bestMouvement, int depth, int playerNo, boolean maximisingPlayer, int alpha, int beta) {
-            // CHECK IF TERMINAL OR LEAF NODE AND EVALUATE IF SO
+            // VÉRIFIER SI LE NŒUD EST TERMINAL OU FEUILLE ET L'ÉVALUER SI C'EST LE CAS
             if (playerNoMouvements(node, nextPlayer(playerNo))) {
                 bestMouvement.set(starveMouvement(node, playerNo));
                 return evalNoMouvements(node, playerNo, maximisingPlayer);
             }
-            //if (depth == 0 || gameOver(node)) return evalNode(node, playerNo, maximisingPlayer);
+            //si (profondeur == 0 || gameOver(node)) return evalNode(node, playerNo, maximisingPlayer) ;
             if (depth == 0 || gameOver(node)) return advancedEval(node, playerNo, maximisingPlayer);
 
-            // APPLY POSSIBLE MouvementS TO CURRENT NODES TO GENERATE LIST OF CHILD NODES
+            // APPLIQUER LES MOUVEMENTS POSSIBLES AUX NŒUDS ACTUELS POUR GENERER UNE LISTE DE NŒUDES ENFANTS
             List<Mouvement> Mouvements = node.legalMouvements(playerNo);
 
             Mouvement garbage = new Mouvement();
@@ -247,7 +219,7 @@
             }
             return alpha;
         }
-
+        // Fonction d'arret de jeu ( voir les regles)
         static boolean gameOver(Jeu node) {
             int compPair=0;
             int compImpair=0;
@@ -408,16 +380,7 @@
         }
 
         @Override
-       /*  public String toString() {
-            return "Jeu{" +
-                    "redSeeds=" + "\u001B[31m" + Arrays.toString(redSeeds)+ "\u001B[0m" +
-                    ", blueSeeds=" +"\u001B[34m"+ Arrays.toString(blueSeeds) +"\u001B[0m"+
-                    ", score1=" + "\u001B[32m"+ score1 +"\u001B[0m"+
-                    ", score2=" + "\u001B[32m"+ score2 +"\u001B[0m"+
-                    '}';
-        }
- */
-
+   
         public String toString() {
             StringBuilder retVal = new StringBuilder("Jeu:\n------------------------------------------------------------------------\n" );
 

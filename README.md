@@ -78,10 +78,12 @@ L'ensemble des règles du jeu sont implémentées grâce aux fonctionnalités su
 > Permets de lancer une partie du jeu  : le jeu se lance avec  une initialisation de jeu et un moteur de jeu avec ajoue d'une fonction 
   qui permet de choisir quel type de joueur commence  à savoir (le robot || le player).
   
+## Ajout de librairie externe ➕
+Une librairie  a ete installée et implantée dans le jeu : [Jansi](https://github.com/fusesource/jansi)
 
-                                          
+c'est une petite bibliothèque Java qui vous permet d'utiliser des codes d'échappement ANSI pour formater la sortie de console (output) et permet un affichage avec couleur , même sous Windows(systeme d'exploitatin de nos pc).                                      
 
-## Regles :
+## Regles 📜 :
 ![alt text](https://github.com/El-S-IA2/Jeu_IA2_MIAGE/blob/main/Capture%20d%E2%80%99%C3%A9cran%202022-03-10%20153418.png?raw=true)
 
 | Regle |
@@ -96,9 +98,7 @@ L'ensemble des règles du jeu sont implémentées grâce aux fonctionnalités su
 | capture : le nombre de graines d'un trou à exactement deux ou trois graines (de n'importe quelle couleur)| 
 | Si l'avant-dernière graine a également amené un trou à deux ou trois graines, celles-ci sont également capturées, et ainsi de suite|
 
-## Condition d'arret de jeu :
-
-
+## Condition d'arret de jeu 🛑 :
 
 
 ## Le jeu s'arrête :
@@ -111,13 +111,16 @@ L'ensemble des règles du jeu sont implémentées grâce aux fonctionnalités su
 
 Le gagnant est le joueur qui a plus de graines que son adversaire.
 
-## Petite capture du jeu :
+## Petite capture du jeu 🎬 :
 ![alt text](https://github.com/El-S-IA2/Jeu_IA2_MIAGE/blob/main/unknown.png?raw=true)
 
 
 
-## Pour lancer le projet :
+## Pour lancer le projet 🔥 :
 
+soit depuis un IDE, aller dans la classe Main et faire un run.
+
+soit à l'aide du fichier jar ↪️ en Bat pour une execution rapide:
 
 ```java
 
@@ -128,7 +131,7 @@ un fichier bat du nom de  jeu.bat est fournit  dans  : \Jeu_IA2_MIAGE\out\artifa
 
 
 <p align="center">
-      -------- fin du document --------
+      🔚 -------- fin du document --------🔚
 </p>
                
 

@@ -1,5 +1,106 @@
 # Jeu_IA2_MIAGE
 
+<p align="center">
+  <a href="#"><b>🏆 Projet Dev Mobile</b></a>
+  <br><br>
+</p>
+
+![alt text](https://github.com/El-S-IA2/Jeu_IA2_MIAGE/blob/main/BYSCH!%20(3).png )
+
+
+
+
+# Hey  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"> <br /> 
+
+
+ Conception et implémentation d'une application type Vinted (https://www.vinted.fr/). 
+ développé avec Flutter  <img src="https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png"  width="50px">  <br /> 
+ Celle-ci s’appellera « MIAGED »,
+ Ce README résume le travail effectué,
+ Projet réalisé par Said Elarays, étudiant en  MIAGE M2 IA2 (2021/2022).
+     
+##  ✅  le projet :
+
+## 🗓    Délai respecté    
+
+## User Story implémentées avec succès :
+
+ 
+ - [x] US#1 : [MVP] Interface de login 
+ - [x] US#2 : [MVP] Liste de vêtements
+ - [x] US#3 : [MVP] Détail d’un vêtement
+ - [x] US#4 : [MVP] Le panier
+ - [x] US#5 : [MVP] Profil utilisateur
+ - [x] US#6 : Filtrer sur la liste des vêtements
+
+## 🌸 Bilan des fonctionnalités supplémentaires  <img src="https://media.giphy.com/media/26vwfMVM6nlEkwftUj/giphy.gif" width="40px">  : 
+
+
+## Dans le processus d'authentification et de profil :
+	
+		1. Possibilité de cree un nouveau compte [depuis l'interface login;
+		2. Possibilité de compléter so profil (nom, prénom, âge, etc..);
+		3. Possibilité de recevoir le MDP en cas d'oubli [depuis l'interface login;
+		4. Les pages politiques de confidentialité et paramètre de notification sont accessibles
+		   depuis profil.
+		
+## Dans la page acheter vêtements :
+
+		1. Une barre de recherche située un haut de l'écran permet de rechercher un article
+		   parmi tous les articles, recherche par nom article et/ou catégorie de l'article;
+		2. Un bouton + est visible en bas à droite de l'écran, il permet une fois cliqué, de 			 		 
+		   naviguer vers une page d'ajout d'article où on remplit les diffèrentes 		  
+		   info(nom, marque, prix).
+		   cet article sera ensuite ajouté dans la base de données et devient visible 
+
+## Dans la page panier :
+		
+
+		 1. Possibilité de modifier la quantité de l'article dans le panier, une mise à jour de  	
+		    la facture est faite en arrière-plan;
+		 2. Un recupilatif de la commande avec les différentes parties de la facture finale est 
+		    visible.
+
+
+## Dans la page Discussion :
+
+	une fonctionnalité discutait est implémenté: un membre peut discuter avec tous les autres 		
+	membres de l'application.
+	la discussion est stocké avec toutes les donnes(texte, photo, vidéo...).
+			
+
+## 🚧 Remarques :
+
+Quelques bugs  peuvent  être  visibles  sur  l'application  mais  rien  de  méchant.
+<br /> 
+Tout au long du projet, le device de test était un Galaxy S20+ (384 px X 854 px), ainsi pour une meilleure expérience utilisateur, 
+il est conseillé de lancer l'application sur cet même device ou avec un autre de résolutions identiques.
+
+## 💁🔑Authentification :
+Pour pouvoir se connecter, un identifiant est mis en place :
+
+ - Login/adresse mail : admin@hotmail.fr
+ - Mot de passe : admin2021
+
+
+
+## 🔧Installation:
+
+Étant donnes qu'une intégration Firestore est dans le projet, vous devez d'abord exécuter les commandes suivantes pour vous assurer que le projet se compile 
+
+```
+flutter pub get
+flutter packages pub run build_runner build --delete-conflicting-outputs
+```
+Cette commande crée les fichiers générés qui analysent chaque enregistrement de Firestore dans un objet de schéma.
+
+Un fichier APK [MIAGEDrelease10.apk](MIAGEDrelease10.apk)est aussi mis en place pour pouvoir tester plus rapidement l'application sur un appareil android
+
+
+<p align="center">
+      -------- fin du document --------
+</p>
+                                                  
 
 
 Regles :

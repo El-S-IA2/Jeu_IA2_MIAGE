@@ -88,8 +88,8 @@ Le résultat est :
 
 ```java
 
-un fichier jar du nom de   est fournit  :  
-un fichier bat du nom de   est fournit :  
+un fichier jar du nom de Jeu_IA2_MIAGE_jar   est fournit  :  \Jeu_IA2_MIAGE\out\artifacts\Jeu_IA2_MIAGE_jar
+un fichier bat du nom de  jeu.bat est fournit  dans  : \Jeu_IA2_MIAGE\out\artifacts\Jeu_IA2_MIAGE_jar 
    
 ```
 

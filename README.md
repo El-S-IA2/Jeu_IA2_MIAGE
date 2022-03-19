@@ -4,8 +4,10 @@
   <a href="#"><b>🏆 Projet Dev Mobile</b></a>
   <br><br>
 </p>
+<p align="center">
+  <img  src="https://github.com/El-S-IA2/Jeu_IA2_MIAGE/blob/main/BYSCH!%20(3).png ">
+</p>
 
-![alt text](https://github.com/El-S-IA2/Jeu_IA2_MIAGE/blob/main/BYSCH!%20(3).png )
 
 
 

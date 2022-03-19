@@ -1,8 +1,8 @@
 import java.util.ArrayDeque;
 
 /**
- * Variable globale qui sert d'historique pour le minimax
- * permet d'assurer une complexité en espace linéaire par rapport à la profondeur du minimax
+ * Creation d'une Variable globale qui sera utile et agira comme une historique pour notre  minimax fonction
+ * elle permet d'assurer une complexité en espace linéaire par rapport à la profondeur du minimax
  */
 class History {
     private static ArrayDeque<Jeu> history = new ArrayDeque<>();

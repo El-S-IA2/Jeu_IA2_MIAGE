@@ -2,30 +2,23 @@ import java.util.Scanner;
 
 
 public class AdvancedOware {
-    int enemyRange;
-    int myRange;
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
 
     private final int DEPTH = 8;
 
 
-
     /**
-     * Permet de jouer
+     * Permet de lancer une partie de jeu
+     * le jeu ca lance avec  une initialisation de jeu et un moteur de jeu
      */
     public void play() {
         play(init(), new Jeu());
     }
 
-
+    /**
+     * etant onné q'un joueur a acces a 8 cases pour jouer, alors notre arbre est de hauteur 8
+     * @param node un moteur de jeu
+     * @return la hauteur de l'arbre
+     */
     private int getDeph(Jeu node){
         return DEPTH;
 
@@ -35,8 +28,8 @@ public class AdvancedOware {
     /**
      * play function
      *
-     * @param computerStart
-     * @param game
+     * @param computerStart  savoir si c'est l'IA qui joue en premier
+     * @param game un moteur de jeu
      */
     private void play(boolean computerStart, Jeu game) {
         System.out.println( game);
@@ -51,15 +44,13 @@ public class AdvancedOware {
                 break;
             }
             if (robotPlay) {
-                //System.out.println(Arrays.toString(game.legalMouvements(currentPlayer).toArray()));
                 expected = game.minimax(game, bestMouvement, getDeph(game), currentPlayer, true, -1000000000, 1000000000);
-                System.out.printf("expected value : %d\n", expected);
+                //System.out.printf("expected value : %d\n", expected);
             } else {
-                //System.out.println(game.toString());
                 bestMouvement = nextRequest(game,currentPlayer);
             }
 
-            game = game.applyMouvement(bestMouvement, currentPlayer, true); //suprimer les prints de Elaraus
+            game = game.applyMouvement(bestMouvement, currentPlayer, true);
             System.out.println(game.toString());
             currentPlayer = Jeu.nextPlayer(currentPlayer);
             robotPlay = !robotPlay;
@@ -70,9 +61,10 @@ public class AdvancedOware {
     }
 
     /**
-     * Permet d'avoir le moove suivant
-     *
-     * @return
+     * Permet d'avoir le mouvement suivant
+     * @param Jeu un moteur de jeu
+     * @param playerNum le numero du joueur qui joue
+     * @return un mouvement
      */
     private Mouvement nextRequest(Jeu Jeu,int playerNum) {
 
@@ -88,50 +80,43 @@ public class AdvancedOware {
         request = new Mouvement(res);
 
         if (!(Jeu.blueSeeds[request.position] + Jeu.redSeeds[request.position] > 0)) {
-            System.out.println("[WARNING] Placement illegal");
+            System.out.println("[AVERTISSEMENT] Placement illégal");
             return nextRequest(Jeu,playerNum);
         }
 
         if (playerNum==2){
             if ( request.position %2 == 0 ){
-                System.out.println("[WARNING] Placement illegal, Only Odd hole are allowed");
+                System.out.println("[AVERTISSEMENT] Placement illégal, seuls les trous impairs sont autorisés.");
                 return nextRequest(Jeu,playerNum);
+            }
         }
-    }
         if(playerNum==1){
             if ( request.position %2 != 0 ){
-                System.out.println("[WARNING] Placement illegal, Only Pair hole are allowed");
+                System.out.println("[AVERTISSEMENT] Placement illégal, seuls les trous de paires sont autorisés.");
                 return nextRequest(Jeu,playerNum);
-        }
+            }
 
         }
 
-     
-       
-
-
-
-        //}
         return request;
     }
 
 
 
     /**
-     * Permet d'initialiser la partie
+     * Permet d'initialiser le debut d'une partie
      *
-     * @return
+     * @return si le firstplayer est l'IA ou pas
      */
     private boolean init() {
-        System.out.print("Initialisation de la partie...\n");
-        System.out.print("Quel est le joueur qui commence en premier ? [robot|player]\n");
+        System.out.print("Initialisation de la partie.......\n");
+        System.out.print("Quel  joueur  commence en premier ? Choisir entre : [robot|player]\n");
         Scanner in = new Scanner(System.in);
         String res = in.nextLine();
 
         System.out.println(res);
 
         if (res.equalsIgnoreCase("robot")) {
-            
             return true;
         } else if (res.equalsIgnoreCase("player")) {
             return false;

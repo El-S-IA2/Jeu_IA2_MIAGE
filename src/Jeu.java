@@ -1,3 +1,4 @@
+    import java.sql.SQLOutput;
     import java.util.ArrayList;
     import java.util.List;
 
@@ -9,6 +10,7 @@
 /**
 	 * Constructeur créant un nouveau plateau[16][2] avec toutes les cellules
 	 * initilisées à 4 graines (2 graines de chaque couleur)
+     *  Ne prend pas de parametres
 	 */
         public Jeu() {
             redSeeds  = new int[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
@@ -17,8 +19,14 @@
             score2 = 0;
         }
 
-        
 
+        /**
+         * Constructeur avec paramteres
+         * @param redSeeds
+         * @param blueSeeds
+         * @param score1
+         * @param score2
+         */
         Jeu(int[] redSeeds, int[] blueSeeds, int score1, int score2) {
             this.redSeeds = redSeeds;
             this.blueSeeds = blueSeeds;
@@ -26,6 +34,11 @@
             this.score2 = score2;
         }
 
+        /**
+         * Permet de s'assurer q'un mouvement est legal vis à vis des regles du jeu
+         * @param playerNo le joueur afin de savoir quel cases il a le droit de jouer
+         * @return une liste de mouvement
+         */
         List<Mouvement> legalMouvements(int playerNo ) { 
 
             //Permet de vérifier si un mouvement n'est pas effectué sur une case vide. 
@@ -68,6 +81,13 @@
             return res;
         }
 
+        /**
+         * Foctio principale de notre jeu, on retrouve les etapes de deplacement de graines et de captures
+         * @param Mouvement
+         * @param playerNo
+         * @param print
+         * @return un Jeu
+         */
         Jeu applyMouvement(Mouvement Mouvement, int playerNo, boolean print) {
             int tracker = 1;
 
@@ -119,14 +139,13 @@
                 }
                 }
 
-            //CAPTURE BEGINS
-            /**
-	                * Capture les graines si possible dependant des regles du jeu 
-                    */
+            //LA CAPTURE COMMENCE
+            // Capture les graines si possible dependant des regles du jeu
+
             Color lastColor = getLastColor(Mouvement);
 
             boolean fail = false;
-            int i = pos - Mouvement.position; // Position d'arrivée - Pos de départ
+            int i = pos - Mouvement.position; // Position d'arrivée - Position de départ
             if (i < 0) i += 16; //
             int count = 0;
             while (!fail && (i >= 0)) {
@@ -187,7 +206,17 @@
             return res;
         }
 
-
+        /**
+         * Fonction MinMax
+         * @param node
+         * @param bestMouvement
+         * @param depth
+         * @param playerNo
+         * @param maximisingPlayer
+         * @param alpha
+         * @param beta
+         * @return un entier
+         */
         int minimax(Jeu node, Mouvement bestMouvement, int depth, int playerNo, boolean maximisingPlayer, int alpha, int beta) {
             // VÉRIFIER SI LE NŒUD EST TERMINAL OU FEUILLE ET L'ÉVALUER SI C'EST LE CAS
             if (playerNoMouvements(node, nextPlayer(playerNo))) {
@@ -225,24 +254,27 @@
             int compImpair=0;
 
 
-            for (int i = 1; i <=8; i=i+2) { 
-                if (node.redSeeds[i]==0) compPair++;
+            for (int i = 1; i <16; i=i+2) {
+                if (node.redSeeds[i]==0 && node.blueSeeds[i]==0) compPair++;
             }
-            for (int j = 0; j <= 8; j= j + 2) {
-                if (node.redSeeds[j]==0) compImpair++;
+
+            for (int j = 0; j < 16; j= j + 2) {
+                if (node.redSeeds[j]==0  && node.blueSeeds[j]==0) compImpair++;
             }
-    
-            return (node.score1 >= 33 || node.score2 >= 33 || node.score1 == 32 && node.score2 == 32 ||compPair==8 || compImpair==8) ;
+            //System.out.println("compte Impair : "+ compImpair +", Compte Pair = "+ compPair);
+
+
+            return (node.score1 >= 33 || node.score2 >= 33 || node.score1 == 32 && node.score2 == 32 ||compPair>=8 || compImpair>=8) ;
         }
 
         Mouvement starveMouvement(Jeu node, int playerNo) {
             List<Mouvement> Mouvements = node.legalMouvements(playerNo);
-            for (Mouvement Mouvement : Mouvements) {
+           /* for (Mouvement Mouvement : Mouvements) {
                 if (playerNoMouvements(node.applyMouvement(Mouvement, nextPlayer(playerNo), true), nextPlayer(playerNo))) {
                     //System.out.println("-*-***-*-*-*-*-*-*-*-*-*-*-*-*-");
                     return Mouvement;
                 }
-            }
+            }*/
             return Mouvements.get(1);
         }
 
@@ -340,12 +372,12 @@
             }
 
             if (playerNo == 1 && maximisingPlayer || playerNo == 2 && !maximisingPlayer) {
-                if (score1 > score2) return 9999999;
-                else if (score2 > score1) return -9999999;
+                if (score1 > score2) return 99999;
+                else if (score2 > score1) return -99999;
                 else return score1 - score2;
             } else {
-                if (score2 > score1) return 9999999;
-                else if (score1 > score2) return -9999999;
+                if (score2 > score1) return 99999;
+                else if (score1 > score2) return -99999;
                 else return score2 - score1;
             }
         }

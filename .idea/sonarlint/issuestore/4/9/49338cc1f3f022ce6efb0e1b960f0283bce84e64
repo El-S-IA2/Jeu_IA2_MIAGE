@@ -1,31 +1,31 @@
 
-S	java:S106_"9Replace this use of System.out or System.err by a logger.(ßÅ¦Øşÿÿÿÿ
-n
-java:S3457I"Q%n should be used in place of \n to produce the platform-specific line separator.(¤«•8º‰§Å÷/
 D
-java:S1940^")Use the opposite operator ("<=") instead.(å‹‰Êşÿÿÿÿ
-7
-java:S1170"!Make this final field static too.(›Ç×è
-J
-java:S1128"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜
-e	java:S116"PRename this field "DEPTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ç×è
-S	java:S106."9Replace this use of System.out or System.err by a logger.(€ÄÂ‚ùÿÿÿÿ
-V	java:S125:"<This block of commented-out lines of code should be removed.(åÅöüıÿÿÿÿ
-S	java:S106W"9Replace this use of System.out or System.err by a logger.(´úé„ıÿÿÿÿ
-g
-java:S3457<"Q%n should be used in place of \n to produce the platform-specific line separator.(ÄøíÕ
-N	java:S106<"9Replace this use of System.out or System.err by a logger.(ÄøíÕ
+java:S1940Z")Use the opposite operator ("<=") instead.(å‹‰Êşÿÿÿÿ
+S	java:S106~"9Replace this use of System.out or System.err by a logger.(ß½ºûüÿÿÿÿ
+e	java:S116"PRename this field "DEPTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ç×è
 A
-java:S1172!"+Remove this unused method parameter "node".(¸¸Ë×
-M
-java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ
-V	java:S125c"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
-N	java:S106I"9Replace this use of System.out or System.err by a logger.(¤«•
-S	java:S106p"9Replace this use of System.out or System.err by a logger.(ˆÛß‹ûÿÿÿÿ
-S	java:S106t"9Replace this use of System.out or System.err by a logger.(¸šñÙüÿÿÿÿ
-V	java:S125>"<This block of commented-out lines of code should be removed.(‡ååüÿÿÿÿ
-S	java:S106o"9Replace this use of System.out or System.err by a logger.(ß½ºûüÿÿÿÿ
-S	java:S106C"9Replace this use of System.out or System.err by a logger.(‡²ì–úÿÿÿÿ
-k	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„œŠ´ıÿÿÿÿ
-V
-java:S1128";Remove this unused import 'java.util.function.IntSupplier'.(Ê–Œûøÿÿÿÿ
+java:S1172"+Remove this unused method parameter "node".(¸¸Ë×
+S	java:S106S"9Replace this use of System.out or System.err by a logger.(´úé„ıÿÿÿÿ
+n
+java:S3457E"Q%n should be used in place of \n to produce the platform-specific line separator.(¤«•8º‰§Å÷/
+S	java:S106["9Replace this use of System.out or System.err by a logger.(ßÅ¦Øşÿÿÿÿ
+7
+java:S1170"!Make this final field static too.(›Ç×è
+g
+java:S34578"Q%n should be used in place of \n to produce the platform-specific line separator.(ÄøíÕ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ˆÛß‹ûÿÿÿÿ
+V	java:S125:"<This block of commented-out lines of code should be removed.(‡ååüÿÿÿÿ
+V	java:S125r"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+T	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(¸šñÙüÿÿÿÿ
+S	java:S106?"9Replace this use of System.out or System.err by a logger.(‡²ì–úÿÿÿÿ
+N	java:S1068"9Replace this use of System.out or System.err by a logger.(ÄøíÕ
+N	java:S106E"9Replace this use of System.out or System.err by a logger.(¤«•
+L
+java:S1066`"/Merge this if statement with the enclosing one.(Šş±´8£Îóúù/
+Q
+java:S1066f"/Merge this if statement with the enclosing one.(üµï“üÿÿÿÿ8£Îóúù/
+r	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ı„ûÿÿÿÿ8£Îóúù/
+Z	java:S106*"9Replace this use of System.out or System.err by a logger.(Ú÷Çøÿÿÿÿ8£Îóúù/
+]	java:S1256"<This block of commented-out lines of code should be removed.(åÅöüıÿÿÿÿ8£Îóúù/
+Z	java:S106a"9Replace this use of System.out or System.err by a logger.(Ãüºöÿÿÿÿÿ8£Îóúù/
+U	java:S106g"9Replace this use of System.out or System.err by a logger.(àÜ®ú8£Îóúù/

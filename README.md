@@ -23,87 +23,44 @@
      
 ##  ✅  le projet :
 
-## 🗓    Délai respecté    
-
-## User Story implémentées avec succès :
-
- 
- - [x] US#1 : [MVP] Interface de login 
- - [x] US#2 : [MVP] Liste de vêtements
- - [x] US#3 : [MVP] Détail d’un vêtement
- - [x] US#4 : [MVP] Le panier
- - [x] US#5 : [MVP] Profil utilisateur
- - [x] US#6 : Filtrer sur la liste des vêtements
-
-## 🌸 Bilan des fonctionnalités supplémentaires  <img src="https://media.giphy.com/media/26vwfMVM6nlEkwftUj/giphy.gif" width="40px">  : 
-
-
-## Dans le processus d'authentification et de profil :
+## Dans le fichier src 6 classes ont été implémenté pour réaliser notre projet : 
+	1.Color 
+	2.History
+	3.Jeu
+	4.Main
+	5.Mouvement
+	6.Partie
 	
-		1. Possibilité de cree un nouveau compte [depuis l'interface login;
-		2. Possibilité de compléter so profil (nom, prénom, âge, etc..);
-		3. Possibilité de recevoir le MDP en cas d'oubli [depuis l'interface login;
-		4. Les pages politiques de confidentialité et paramètre de notification sont accessibles
-		   depuis profil.
-		
-## Dans la page acheter vêtements :
+## Class Color 
+> il s'agit uniquement d'une class contenant un Enum . 
 
-		1. Une barre de recherche située un haut de l'écran permet de rechercher un article
-		   parmi tous les articles, recherche par nom article et/ou catégorie de l'article;
-		2. Un bouton + est visible en bas à droite de l'écran, il permet une fois cliqué, de 			 		 
-		   naviguer vers une page d'ajout d'article où on remplit les diffèrentes 		  
-		   info(nom, marque, prix).
-		   cet article sera ensuite ajouté dans la base de données et devient visible 
+ ## Class History 
+ 
+> Création d'une variable globale qui sera utile et agira comme un historique pour notre  minimax fonction; 
+> elle permet d'assurer une complexité en espace linéaire par rapport à la profondeur du minimax.
 
-## Dans la page panier :
-		
-
-		 1. Possibilité de modifier la quantité de l'article dans le panier, une mise à jour de  	
-		    la facture est faite en arrière-plan;
-		 2. Un recupilatif de la commande avec les différentes parties de la facture finale est 
-		    visible.
-
-
-## Dans la page Discussion :
-
-	une fonctionnalité discutait est implémenté: un membre peut discuter avec tous les autres 		
-	membres de l'application.
-	la discussion est stocké avec toutes les donnes(texte, photo, vidéo...).
-			
-
-## 🚧 Remarques :
-
-Quelques bugs  peuvent  être  visibles  sur  l'application  mais  rien  de  méchant.
-<br /> 
-Tout au long du projet, le device de test était un Galaxy S20+ (384 px X 854 px), ainsi pour une meilleure expérience utilisateur, 
-il est conseillé de lancer l'application sur cet même device ou avec un autre de résolutions identiques.
-
-## 💁🔑Authentification :
-Pour pouvoir se connecter, un identifiant est mis en place :
-
- - Login/adresse mail : admin@hotmail.fr
- - Mot de passe : admin2021
-
-
-
-## 🔧Installation:
-
-Étant donnes qu'une intégration Firestore est dans le projet, vous devez d'abord exécuter les commandes suivantes pour vous assurer que le projet se compile 
-
+## Class Jeu 
+```java
+L'ensemble des règles du jeu sont implémentées grâce aux fonctionnalités suivantes :
+	1.legalMouvements : 	
+	2.applyMouvement : 
+	3.minimax :  
+	4.gameOver : 
 ```
-flutter pub get
-flutter packages pub run build_runner build --delete-conflicting-outputs
-```
-Cette commande crée les fichiers générés qui analysent chaque enregistrement de Firestore dans un objet de schéma.
 
-Un fichier APK [MIAGEDrelease10.apk](MIAGEDrelease10.apk)est aussi mis en place pour pouvoir tester plus rapidement l'application sur un appareil android
+## Class Main 
+>Permet de lancer l'application . 
 
+## Class Mouvement 
+> Class qui représente un mouvement : prend en entrée une  Position et une couleur de graine à jouer exemple : 2R || 2B etc...
 
-<p align="center">
-      -------- fin du document --------
-</p>
-                                                  
+## Class Partie 
 
+> Permets de lancer une partie du jeu  : le jeu se lance avec  une initialisation de jeu et un moteur de jeu avec ajoue d'une fonction 
+  qui permet de choisir quel type de joueur commence  à savoir (le robot || le player).
+  
+
+                                          
 
 Regles :
 
@@ -196,5 +153,10 @@ un fichier bat du nom de  jeu.bat est fournit  dans  : \Jeu_IA2_MIAGE\out\artifa
    
 ```
 
+
+<p align="center">
+      -------- fin du document --------
+</p>
+               
 
 

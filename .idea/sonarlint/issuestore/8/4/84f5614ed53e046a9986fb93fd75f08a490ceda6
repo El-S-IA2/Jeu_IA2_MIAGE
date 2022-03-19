@@ -1,0 +1,38 @@
+
+O
+java:S1481("-Remove this unused "expected" local variable.(Ò¬÷ƒıÿÿÿÿ8û–êıù/
+T	java:S106Œ"9Replace this use of System.out or System.err by a logger.(¸šñÙüÿÿÿÿ
+T	java:S106X"9Replace this use of System.out or System.err by a logger.(õäû[8Œ†çüù/
+Z	java:S106%"9Replace this use of System.out or System.err by a logger.(Ú÷Çøÿÿÿÿ8£Îóúù/
+^
+java:S18541"<Remove this useless assignment to local variable "expected".(ö‘èƒşÿÿÿÿ8û–êıù/
+Q
+java:S1066c"/Merge this if statement with the enclosing one.(üµï“üÿÿÿÿ8Œ†çüù/
+7
+java:S1170"!Make this final field static too.(›Ç×è
+n
+java:S3457A"Q%n should be used in place of \n to produce the platform-specific line separator.(¤«•8¢¬¸‘ú/
+H
+java:S1874"+Remove this use of "out"; it is deprecated.(ùöÃá8ÁÿŠ’ú/
+N	java:S106A"9Replace this use of System.out or System.err by a logger.(¤«•
+N
+java:S1874€"+Remove this use of "out"; it is deprecated.(æŠÂ·øÿÿÿÿ8ÁÿŠ’ú/
+T	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(ÕšëŸûÿÿÿÿ
+S	java:S106P"9Replace this use of System.out or System.err by a logger.(´úé„ıÿÿÿÿ
+A
+java:S1172"+Remove this unused method parameter "node".(¸¸Ë×
+U	java:S106^"9Replace this use of System.out or System.err by a logger.(ßŒ´8Œ†çüù/
+Z	java:S106d"9Replace this use of System.out or System.err by a logger.(«×Çêùÿÿÿÿ8Œ†çüù/
+N
+java:S1874‚"+Remove this use of "out"; it is deprecated.(æŠÂ·øÿÿÿÿ8ÁÿŠ’ú/
+K
+java:S1940W")Use the opposite operator ("<=") instead.(å‹‰Êşÿÿÿÿ8Œ†çüù/
+N
+java:S1874„"+Remove this use of "out"; it is deprecated.(’Ÿ¿Öûÿÿÿÿ8ÁÿŠ’ú/
+e	java:S116"PRename this field "DEPTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ç×è
+S	java:S1069"9Replace this use of System.out or System.err by a logger.(‡²ì–úÿÿÿÿ
+L
+java:S1066]"/Merge this if statement with the enclosing one.(Šş±´8Œ†çüù/
+T	java:S106‡"9Replace this use of System.out or System.err by a logger.(Û£™Æøÿÿÿÿ
+r	java:S117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ı„ûÿÿÿÿ8£Îóúù/
+]	java:S1252"<This block of commented-out lines of code should be removed.(Ö‰Øøÿÿÿÿ8û–êıù/

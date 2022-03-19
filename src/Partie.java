@@ -1,7 +1,9 @@
+import org.fusesource.jansi.AnsiConsole;
+
 import java.util.Scanner;
 
 
-public class AdvancedOware {
+public class Partie {
 
     private final int DEPTH = 8;
 
@@ -50,8 +52,13 @@ public class AdvancedOware {
                 bestMouvement = nextRequest(game,currentPlayer);
             }
 
+
             game = game.applyMouvement(bestMouvement, currentPlayer, true);
-            System.out.println(game.toString());
+            AnsiConsole.systemInstall();
+            AnsiConsole.out.println(game.toString());
+            //System.out.println(game.toString());
+
+
             currentPlayer = Jeu.nextPlayer(currentPlayer);
             robotPlay = !robotPlay;
 
@@ -66,13 +73,13 @@ public class AdvancedOware {
      * @param playerNum le numero du joueur qui joue
      * @return un mouvement
      */
-    private Mouvement nextRequest(Jeu Jeu,int playerNum) {
+    private Mouvement nextRequest(Jeu Jeu, int playerNum) {
 
         String res = "";
         Mouvement request;
 
         while (!res.matches("[0-9]*[a-zA-Z][0-9]*")) {
-            System.out.print("Taper le coup à jouer:\n");
+            System.out.print("Taper le coup a jouer:\n");
             Scanner in = new Scanner(System.in);
             res = in.nextLine();
         }
@@ -80,19 +87,19 @@ public class AdvancedOware {
         request = new Mouvement(res);
 
         if (!(Jeu.blueSeeds[request.position] + Jeu.redSeeds[request.position] > 0)) {
-            System.out.println("[AVERTISSEMENT] Placement illégal");
+            System.out.println("[AVERTISSEMENT] Placement illegal");
             return nextRequest(Jeu,playerNum);
         }
 
         if (playerNum==2){
             if ( request.position %2 == 0 ){
-                System.out.println("[AVERTISSEMENT] Placement illégal, seuls les trous impairs sont autorisés.");
+                System.out.println("[AVERTISSEMENT] Placement illegal, seuls les trous impairs sont autorises.");
                 return nextRequest(Jeu,playerNum);
             }
         }
         if(playerNum==1){
             if ( request.position %2 != 0 ){
-                System.out.println("[AVERTISSEMENT] Placement illégal, seuls les trous de paires sont autorisés.");
+                System.out.println("[AVERTISSEMENT] Placement illegal, seuls les trous de paires sont autorises.");
                 return nextRequest(Jeu,playerNum);
             }
 
@@ -102,13 +109,14 @@ public class AdvancedOware {
     }
 
 
-
     /**
      * Permet d'initialiser le debut d'une partie
      *
      * @return si le firstplayer est l'IA ou pas
      */
     private boolean init() {
+
+
         System.out.print("Initialisation de la partie.......\n");
         System.out.print("Quel  joueur  commence en premier ? Choisir entre : [robot|player]\n");
         Scanner in = new Scanner(System.in);

@@ -1,6 +1,10 @@
-    import java.sql.SQLOutput;
-    import java.util.ArrayList;
-    import java.util.List;
+import org.fusesource.jansi.AnsiConsole;
+
+import static org.fusesource.jansi.Ansi.*;
+import static org.fusesource.jansi.Ansi.Color.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
     public class Jeu {
         int[] redSeeds;
@@ -133,9 +137,10 @@
                 }
 
             if (print) {
-                if (Mouvement.ColorRed)  System.out.printf("Player %d plays Mouvement %s with %d seeds\n", playerNo, Mouvement.toString(), redSeeds[Mouvement.position]);
+                if (Mouvement.ColorRed)
+                    System.out.printf("Le joueur %d joue le mouvement %s avec %d graines\n", playerNo, Mouvement.toString(), redSeeds[Mouvement.position]);
                 else {
-                    System.out.printf("Player %d plays Mouvement %s with %d seeds\n", playerNo, Mouvement.toString(), + blueSeeds[Mouvement.position]);
+                    System.out.printf("Le joueur %d joue le mouvement %s avec %d graines\n", playerNo, Mouvement.toString(), +blueSeeds[Mouvement.position]);
                 }
                 }
 
@@ -163,7 +168,8 @@
                     if (holeCap == 2 || holeCap == 3) {
                         newblueSeeds[capturePos] = 0;
                         newRedSeeds[capturePos] = 0;
-                        if (holeCap > 0 && print) System.out.printf("Player %d captures %d blue seeds and %d red seeds from hole %d\n", playerNo, BlueCap,RedCap, capturePos + 1);
+                        if (holeCap > 0 && print)
+                            System.out.printf("Le joueur %d capture %d graines bleues et %d graines rouges dans le trou %d\n", playerNo, BlueCap, RedCap, capturePos + 1);
                         count += holeCap;
                         i--;
                     } 
@@ -186,7 +192,8 @@
                         newblueSeeds[capturePos] = 0;
                         blueCap = true;
                     }
-                    if (newcap > 0 && print) System.out.printf("Player %d captures %d red or blue seeds from hole %d\n", playerNo, newcap, capturePos);
+                    if (newcap > 0 && print)
+                        System.out.printf("Le joueur %d capture %d graines rouges ou bleues du trou %d\n", playerNo, newcap, capturePos);
                     count += newcap;
                     i--;
 
@@ -411,36 +418,70 @@
             }
         }
 
-        @Override
-   
-        public String toString() {
-            StringBuilder retVal = new StringBuilder("Jeu:\n------------------------------------------------------------------------\n" );
 
-            retVal.append(" redSeeds  = [");
+        public static final String ANSI_RESET = "\u001B[0m";
+        public static final String ANSI_BLACK = "\u001B[30m";
+        public static final String ANSI_RED = "\u001B[31m";
+        public static final String ANSI_GREEN = "\u001B[32m";
+        public static final String ANSI_YELLOW = "\u001B[33m";
+        public static final String ANSI_BLUE = "\u001B[34m";
+        public static final String ANSI_PURPLE = "\u001B[35m";
+        public static final String ANSI_CYAN = "\u001B[36m";
+        public static final String ANSI_WHITE = "\u001B[37m";
+        @Override
+
+       /* public String toString() {
+            AnsiConsole.systemInstall();
+            AnsiConsole.out.println(ANSI_CYAN +"Jeu:\n------------------------------------------------------------------------------------------------------------------------------------------------\n"+ ANSI_RESET);
+            AnsiConsole.out.print(" redSeeds  = [");
+
             for (int i = 0 ; i < redSeeds.length ; i++) {
 
-                retVal.append("{\uu001B[35m" +(i+1)+"\u001B[0m} : \u001B[31m"+redSeeds[i]+"\u001B[0m  ");
-                
-        
+                AnsiConsole.out.print(" {"+ANSI_PURPLE+(i+1)+ANSI_RESET+"}:"+ANSI_RED+redSeeds[i]+ANSI_RESET);
+
             }
-            retVal.append("]\u001B[0m");
-          
+
+            AnsiConsole.out.print(" ] \n blueSeeds = [");
+            for (int j = 0 ; j < blueSeeds.length ; j++) {
+                AnsiConsole.out.print(" {"+ANSI_PURPLE+(j+1)+ANSI_RESET+"}:"+ANSI_BLUE+redSeeds[j]+ANSI_RESET);
+
+            }
+
+            AnsiConsole.out.print(" ]\n score1="+ ANSI_YELLOW+ score1 +ANSI_RESET+ ", score2=" +ANSI_YELLOW+ score2+ANSI_RESET );
+
+
+
+            return ANSI_YELLOW+ score1+ANSI_RESET ;
+        
+        }*/
+
+        public String toString() {
+            AnsiConsole.systemInstall();
+            StringBuilder retVal = new StringBuilder(ANSI_CYAN + "Jeu:\n------------------------------------------------------------------------------------------------------------------------------------------------\n" + ANSI_RESET);
+
+            retVal.append(" redSeeds  = [");
+            for (int i = 0; i < redSeeds.length; i++) {
+
+                retVal.append(" {" + ANSI_PURPLE + (i + 1) + ANSI_RESET + "}:" + ANSI_RED + redSeeds[i] + ANSI_RESET);
+
+
+            }
+            retVal.append("]");
+
 
             retVal.append(" \n blueSeeds = [");
-            for (int j = 0 ; j < blueSeeds.length ; j++) {
-                retVal.append("{\uu001B[35m" +(j+1)+"\u001B[0m} : \u001B[34m"+blueSeeds[j]+"\u001B[0m  ");
-               
-            
+            for (int j = 0; j < blueSeeds.length; j++) {
+                retVal.append(" {" + ANSI_PURPLE + (j + 1) + ANSI_RESET + "}:" + ANSI_BLUE + blueSeeds[j] + ANSI_RESET);
+
 
             }
-            retVal.append("]\u001B[0m");
+            retVal.append("]");
             retVal.append("\n");
 
-            retVal.append( "score1=" + "\u001B[32m"+ score1 +"\u001B[0m"+
-            ", score2=" + "\u001B[32m"+ score2 +"\u001B[0m"
-            );
+            retVal.append(" ]\n score1=" + ANSI_YELLOW + score1 + ANSI_RESET + ", score2=" + ANSI_YELLOW + score2 + ANSI_RESET);
+            AnsiConsole.systemInstall();
 
             return retVal.toString();
-        
+
         }
     }

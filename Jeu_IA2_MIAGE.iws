@@ -7,22 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="884bdb6f-7e68-46f2-b6d2-e2750458b3f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/49338cc1f3f022ce6efb0e1b960f0283bce84e64" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/49338cc1f3f022ce6efb0e1b960f0283bce84e64" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/188512f477daeb47846d84c7276223bee0f93a5f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/188512f477daeb47846d84c7276223bee0f93a5f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/49338cc1f3f022ce6efb0e1b960f0283bce84e64" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/70dc118f337e9b2b7bab14eaeab915a5a6a72c29" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/70dc118f337e9b2b7bab14eaeab915a5a6a72c29" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dcb062c057054db8e7c0f1ffcedce147aba706ba" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dcb062c057054db8e7c0f1ffcedce147aba706ba" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jeu_IA2_MIAGE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Jeu_IA2_MIAGE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jeu_IA2_MIAGE.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Jeu_IA2_MIAGE.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jeu_IA2_MIAGE.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Jeu_IA2_MIAGE.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/AdvancedOware.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/AdvancedOware.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/Color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/History.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/History.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Jeu_IA2_MIAGE_jar/Jeu_IA2_MIAGE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Jeu_IA2_MIAGE_jar/Jeu_IA2_MIAGE.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/AdvancedOware.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/Jeu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/Jeu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/META-INF/Jeu_IA2_MIAGE.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/Mouvement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Jeu_IA2_MIAGE/Mouvement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdvancedOware.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdvancedOware.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdvancedOware.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Partie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Jeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jeu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mouvement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mouvement.java" afterDir="false" />
     </list>
@@ -37,13 +37,15 @@
   </component>
   <component name="ProjectId" id="26Ek9SFOtWC1cLb4p35Qu8M9LPB" />
   <component name="PropertiesComponent">
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/META-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jansi-2.1.0.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -83,7 +85,9 @@
       <updated>1646995980330</updated>
       <workItem from="1646995982442" duration="8130000" />
       <workItem from="1647646126828" duration="605000" />
-      <workItem from="1647648726613" duration="5495000" />
+      <workItem from="1647648726613" duration="6113000" />
+      <workItem from="1647690736514" duration="4347000" />
+      <workItem from="1647695163271" duration="3141000" />
     </task>
     <servers />
   </component>
@@ -102,16 +106,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Mouvement.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

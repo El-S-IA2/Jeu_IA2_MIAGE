@@ -1,40 +1,41 @@
 
-i
-java:S1871‡"MThis branch's code block is the same as the block for the branch on line 133.(¥¼˜úÿÿÿÿ
-U
-java:S1117Í"9Rename "score1" which hides the field declared at line 7.(Èö‚úÿÿÿÿ
+s	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãîË®ıÿÿÿÿ8èÍáıù/
+Y	java:S125’"<This block of commented-out lines of code should be removed.(ˆ£Œ¨8ßûÍşù/
+s	java:S117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºß£ôÿÿÿÿÿ8èÍáıù/
+V
+java:S1117ï":Rename "score1" which hides the field declared at line 10.(Èö‚úÿÿÿÿ
+V	java:S106Š"9Replace this use of System.out or System.err by a logger.(Å¿œÉ8¡Îóúù/
+n	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¼¢Ë8¡Îóúù/
 m
-java:S3776G"RRefactor this method to reduce its Cognitive Complexity from 61 to the 15 allowed.(±®¾¬ıÿÿÿÿ
-l	java:S117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºß£ôÿÿÿÿÿ
-k	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±®¾¬ıÿÿÿÿ
-U
-java:S1117Î"9Rename "score2" which hides the field declared at line 8.(ÂÀÀÕÿÿÿÿÿ
-l	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºß£ôÿÿÿÿÿ
-l	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãîË®ıÿÿÿÿ
-t	java:S135„"YReduce the total number of break and continue statements in this loop to use at most one.(¯ÛÿÅüÿÿÿÿ
-n	java:S117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¼¢Ë8¡Îóúù/
-n	java:S117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¼¢Ë8¡Îóúù/
+java:S3776]"RRefactor this method to reduce its Cognitive Complexity from 61 to the 15 allowed.(±®¾¬ıÿÿÿÿ
+n	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¼¢Ë8¡Îóúù/
+Y	java:S125Š"<This block of commented-out lines of code should be removed.(¼“Ú¥8ª°şù/
+U	java:S106¨"9Replace this use of System.out or System.err by a logger.(Ş¸–}8¡Îóúù/
 t
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(ÜôÑ«úÿÿÿÿ8¡Îóúù/
-R
-java:S1854m"5Remove this useless assignment to local variable "i".(Ì‚ˆÌ8¡Îóúù/
-5
-java:S2178c"Correct this "|" to "||".(é›t8¡Îóúù/
-s
-java:S3457t"Q%n should be used in place of \n to produce the platform-specific line separator.(— ûÕùÿÿÿÿ8¡Îóúù/
-Z	java:S106t"9Replace this use of System.out or System.err by a logger.(— ûÕùÿÿÿÿ8¡Îóúù/
-n
-java:S3457v"Q%n should be used in place of \n to produce the platform-specific line separator.(ª¿™8¡Îóúù/
-U	java:S106v"9Replace this use of System.out or System.err by a logger.(ª¿™8¡Îóúù/
+java:S3457Œ"Q%n should be used in place of \n to produce the platform-specific line separator.(åè¢Ùùÿÿÿÿ8¡Îóúù/
+o
+java:S3457¿"Q%n should be used in place of \n to produce the platform-specific line separator.(´…‰£8¡Îóúù/
+V	java:S106¿"9Replace this use of System.out or System.err by a logger.(´…‰£8¡Îóúù/
+[	java:S106Œ"9Replace this use of System.out or System.err by a logger.(åè¢Ùùÿÿÿÿ8¡Îóúù/
+i
+java:S1871œ"MThis branch's code block is the same as the block for the branch on line 154.(¥¼˜úÿÿÿÿ
 C
-java:S1659‹"%Declare "BlueCap" on a separate line.(Š¼¢Ë8¡Îóúù/
+java:S1659 "%Declare "BlueCap" on a separate line.(Š¼¢Ë8¡Îóúù/
+]
+java:S1117ğ":Rename "score2" which hides the field declared at line 11.(ÂÀÀÕÿÿÿÿÿ8èÍáıù/
+k	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±®¾¬ıÿÿÿÿ
+S
+java:S1854ƒ"5Remove this useless assignment to local variable "i".(Ì‚ˆÌ8¡Îóúù/
+5
+java:S2178y"Correct this "|" to "||".(é›t8¡Îóúù/
+t	java:S135™"YReduce the total number of break and continue statements in this loop to use at most one.(¯ÛÿÅüÿÿÿÿ
+o
+java:S3457Š"Q%n should be used in place of \n to produce the platform-specific line separator.(Å¿œÉ8¡Îóúù/
 B
-java:S1659‹"$Declare "RedCap" on a separate line.(Š¼¢Ë8¡Îóúù/
+java:S1659 "$Declare "RedCap" on a separate line.(Š¼¢Ë8¡Îóúù/
+l	java:S117è"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºß£ôÿÿÿÿÿ
 t
-java:S3457“"Q%n should be used in place of \n to produce the platform-specific line separator.(¡’äêúÿÿÿÿ8¡Îóúù/
-[	java:S106“"9Replace this use of System.out or System.err by a logger.(¡’äêúÿÿÿÿ8¡Îóúù/
-t
-java:S3457ª"Q%n should be used in place of \n to produce the platform-specific line separator.(·ó™‚úÿÿÿÿ8¡Îóúù/
-[	java:S106ª"9Replace this use of System.out or System.err by a logger.(·ó™‚úÿÿÿÿ8¡Îóúù/
-Y	java:S125Å"<This block of commented-out lines of code should be removed.(Å½¶ö8¡Îóúù/
-^	java:S125ò"<This block of commented-out lines of code should be removed.(™½’¾ıÿÿÿÿ8¡Îóúù/
+java:S3776,"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(ÜôÑ«úÿÿÿÿ8¡Îóúù/
+n
+java:S3457¨"Q%n should be used in place of \n to produce the platform-specific line separator.(Ş¸–}8¡Îóúù/
+Y	java:S125ä"<This block of commented-out lines of code should be removed.(Å½¶ö8¡Îóúù/

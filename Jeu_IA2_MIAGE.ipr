@@ -5,6 +5,7 @@
       <output-path>$PROJECT_DIR$/out/artifacts/Jeu_IA2_MIAGE_jar</output-path>
       <root id="archive" name="Jeu_IA2_MIAGE.jar">
         <element id="module-output" name="Jeu_IA2_MIAGE" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../../jansi-2.1.0.jar" path-in-jar="/" />
       </root>
     </artifact>
   </component>
@@ -24,6 +25,15 @@
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+  </component>
+  <component name="libraryTable">
+    <library name="jansi-2.1.0">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/../../jansi-2.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
   </component>
   <component name="masterDetails">
     <states>

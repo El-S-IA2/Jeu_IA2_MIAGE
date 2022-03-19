@@ -111,6 +111,8 @@ L'ensemble des règles du jeu sont implémentées grâce aux fonctionnalités su
 
 Le gagnant est le joueur qui a plus de graines que son adversaire.
 
+## Petite capture du jeu :
+![alt text](https://github.com/El-S-IA2/Jeu_IA2_MIAGE/blob/main/unknown.png?raw=true)
 
 
 

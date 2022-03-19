@@ -1,5 +1,7 @@
 # Jeu_IA2_MIAGE
 
+
+
 Regles :
 
 ![alt text](https://github.com/El-S-IA2/Jeu_IA2_MIAGE/blob/main/Capture%20d%E2%80%99%C3%A9cran%202022-03-10%20153418.png?raw=true)
@@ -79,3 +81,17 @@ Les trous 1, 16, 15 sont capturés 2+3+2=7 graines sont capturées
 Le résultat est :
 1 () 2 (2B) 3(1B) 4(2B) 5(1R)
 16 () 15 () 14 (4B)
+
+
+## Pour lancer le projet :
+
+
+```java
+
+un fichier jar du nom de   est fournit  :  
+un fichier bat du nom de   est fournit :  
+   
+```
+
+
+
